@@ -1,6 +1,7 @@
 apiVersion: apps/v1beta2
 kind: Deployment
 metadata:
+  namespace: spinnaker-hello-world
   name: spinnaker-hello-world
   labels:
     app: spinnaker-hello-world

@@ -1,6 +1,7 @@
 kind: Service
 apiVersion: v1
 metadata:
+  namespace: spinnaker-hello-world
   name: spinnaker-hello-world
 spec:
   selector:
