@@ -5,7 +5,7 @@ metadata:
   labels:
     app: spinnaker-hello-world
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: spinnaker-hello-world
