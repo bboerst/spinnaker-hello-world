@@ -1,0 +1,15 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: nginx-internal
+  name: spinnaker-hello-world
+  namespace: spinnaker-hello-world
+spec:
+  rules:
+  - host: spinnaker-hello-world.k8s.tools.us-west-1.tunenet.io
+    http:
+      paths:
+      - backend:
+          serviceName: spinnaker-hello-world
+          servicePort: 9900

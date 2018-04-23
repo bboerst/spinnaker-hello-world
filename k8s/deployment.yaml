@@ -1,0 +1,21 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: spinnaker-hello-world
+  labels:
+    app: spinnaker-hello-world
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: spinnaker-hello-world
+  template:
+    metadata:
+      labels:
+        app: spinnaker-hello-world
+    spec:
+      containers:
+      - name: spinnaker-hello-world
+        image: bboerst/spinnaker-hello-world:latest
+        ports:
+        - containerPort: 9090
